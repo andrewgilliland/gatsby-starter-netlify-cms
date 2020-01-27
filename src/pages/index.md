@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-title: Gatsby + Netlify CMS
+title: New Title!
 image: /img/home-jumbotron.jpg
 heading: Building New Cool Stuff
 subheading: More Coffee! Now!
