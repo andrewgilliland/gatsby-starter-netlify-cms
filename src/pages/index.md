@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-title: New Title!
+title: We Keep Changing it up!
 image: /img/home-jumbotron.jpg
 heading: Building New Cool Stuff
 subheading: More Coffee! Now!
