@@ -1,13 +1,13 @@
 ---
 templateKey: index-page
-title: We Keep Changing it up!
+title: Website Title
 image: /img/home-jumbotron.jpg
-heading: Building New Cool Stuff
-subheading: More Coffee! Now!
+heading: Website Heading
+subheading: Website Subheading
 mainpitch:
-  title: Why Netlify CMS + Gatsby
+  title: Main Pitch Title
   description: |
-    It just works
+    Main Pitch Description
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
