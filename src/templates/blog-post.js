@@ -17,23 +17,23 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <section className="">
       {helmet || ''}
-      <div className="container content">
+      <div className="markdown">
         <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+          <div className="max-w-2xl px-4 mx-auto py-16">
+            <h1 className="font-bold text-2xl tracking-wide">
               {title}
             </h1>
-            <p>{description}</p>
+            <p className="mt-8">{description}</p>
             <PostContent content={content} />
             {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
+              <div className="tags mt-8">
+                <h4 className="font-semibold">Tags</h4>
+                <ul className="flex flex-wrap mt-0">
                   {tags.map(tag => (
                     <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                      <Link className="font-semibold text-blue-700 pl-4" to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                     </li>
                   ))}
                 </ul>

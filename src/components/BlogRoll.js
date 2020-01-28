@@ -31,13 +31,13 @@ class BlogRoll extends React.Component {
                   ) : null}
                   <p className="flex items-start flex-col px-4 py-6">
                     <Link
-                      className="font-semibold text-gray-700 hover:text-gray-600"
+                      className="font-semibold text-gray-900 hover:text-gray-700"
                       to={post.fields.slug}
                     >
                       {post.frontmatter.title}
                     </Link>
                     {/* <span> &bull; </span> */}
-                    <span className="text-gray-600">
+                    <span className="text-gray-700">
                       {post.frontmatter.date}
                     </span>
                   </p>

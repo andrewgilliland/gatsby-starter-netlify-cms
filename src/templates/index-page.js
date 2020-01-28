@@ -37,42 +37,35 @@ export const IndexPageTemplate = ({
         </h3>
       </div>
     </div>
-    <section className="section section--gradient px-4 py-16">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="flex flex-col justify-center items-center">
-                  <h1 className="text-gray-900 text-2xl">{mainpitch.title}</h1>
-                  <h3 className="text-gray-800 text-lg mt-2">{mainpitch.description}</h3>
-                </div>
+    
+    <section className="section section--gradient py-16">
+      <div className="flex flex-col justify-center items-center">
+        <h1 className="text-gray-900 text-2xl">{mainpitch.title}</h1>
+        <h3 className="text-gray-800 text-lg mt-2">{mainpitch.description}</h3>
+      </div>
 
-                <div className="flex flex-col items-center mt-10">
-                  <h3 className="font-semibold text-gray-900 text-lg">{heading}</h3>
-                  <p className="leading-relaxed text-gray-800 text-center max-w-lg mt-4">
-                    {description}
-                  </p>
-                </div>
+      <div className="flex flex-col items-center mt-10">
+        <h3 className="font-semibold text-gray-900 text-lg">{heading}</h3>
+        <p className="leading-relaxed text-gray-800 text-center max-w-lg mt-4">
+          {description}
+        </p>
+      </div>
 
-                <Features gridItems={intro.blurbs} />
+      <Features gridItems={intro.blurbs} />
 
-                <div className="flex flex-col items-center mt-20">
-                  <h3 className="font-semibold text-gray-900 text-lg sm:text-xl tracking-wide uppercase">Latest stories</h3>
+      <div className="flex flex-col items-center mt-20">
+        <h3 className="font-semibold text-gray-900 text-lg sm:text-xl tracking-wide uppercase">
+          Latest stories
+        </h3>
 
-                  <BlogRoll />
+        <BlogRoll />
 
-                  <Link
-                    className="font-semibold text-gray-100 sm:text-lg bg-blue-700 px-4 py-2 sm:px-5 sm:py-3 rounded mt-10 hover:bg-blue-600 focus:bg-blue-600"
-                    to="/blog"
-                  >
-                    Read More
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Link
+          className="font-semibold text-gray-100 sm:text-lg bg-blue-700 px-4 py-2 sm:px-5 sm:py-3 rounded mt-10 hover:bg-blue-600 focus:bg-blue-600"
+          to="/blog"
+        >
+          Read More
+        </Link>
       </div>
     </section>
   </div>
