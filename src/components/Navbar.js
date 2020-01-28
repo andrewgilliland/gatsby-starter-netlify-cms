@@ -34,11 +34,11 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-transparent"
+        className="navbar is-transparent text-gray-900 bg-gray-100 font-semibold"
         role="navigation"
         aria-label="main-navigation"
       >
-        <div className="container">
+        <div className="container flex flex-col sm:flex-row items-center justify-between px-10 py-5">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
               <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
@@ -58,14 +58,14 @@ const Navbar = class extends React.Component {
             id="navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
+            <div className="flex flex-col sm:flex-row mt-5 sm:mt-0">
+              <Link className="px-5 mt-1 sm:mt-0 hover:bg-gray-300 rounded" to="/about">
                 About
               </Link>
-              <Link className="navbar-item" to="/blog">
+              <Link className="px-5 mt-1 sm:mt-0 hover:bg-gray-300 rounded" to="/blog">
                 Blog
               </Link>
-              <Link className="navbar-item" to="/contact">
+              <Link className="px-5 mt-1 sm:mt-0 hover:bg-gray-300 rounded" to="/contact">
                 Contact
               </Link>
             </div>

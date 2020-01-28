@@ -9,10 +9,10 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
+      <div className="flex justify-center flex-wrap max-w-4xl pb-16">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
+            <div className="flex-grow max-w-sm rounded shadow-lg mt-10 mx-5" key={post.id}>
               <article
                 className={`blog-list-item tile is-child box notification ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
@@ -29,24 +29,24 @@ class BlogRoll extends React.Component {
                       />
                     </div>
                   ) : null}
-                  <p className="post-meta">
+                  <p className="flex items-start flex-col px-4 py-6">
                     <Link
-                      className="title has-text-primary is-size-4"
+                      className="font-semibold text-gray-700 hover:text-gray-600"
                       to={post.fields.slug}
                     >
                       {post.frontmatter.title}
                     </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
+                    {/* <span> &bull; </span> */}
+                    <span className="text-gray-600">
                       {post.frontmatter.date}
                     </span>
                   </p>
                 </header>
-                <p>
+                <p className="px-4 pb-8">
                   {post.excerpt}
                   <br />
                   <br />
-                  <Link className="button" to={post.fields.slug}>
+                  <Link className="font-semibold text-blue-700 px-4 py-2 rounded border-2 border-blue-500 hover:bg-blue-500 hover:text-gray-100" to={post.fields.slug}>
                     Keep Reading →
                   </Link>
                 </p>
@@ -88,7 +88,7 @@ export default () => (
                 featuredpost
                 featuredimage {
                   childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
+                    fluid(maxWidth: 240, quality: 100) {
                       ...GatsbyImageSharpFluid
                     }
                   }
