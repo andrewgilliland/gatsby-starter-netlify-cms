@@ -17,11 +17,11 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="">
+    <section>
       {helmet || ''}
       <div className="markdown">
         <div className="columns">
-          <div className="max-w-2xl px-4 mx-auto py-16">
+          <div className="max-w-xl px-4 mx-auto py-16">
             <h1 className="font-bold text-2xl tracking-wide">
               {title}
             </h1>

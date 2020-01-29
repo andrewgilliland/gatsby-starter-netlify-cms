@@ -2,6 +2,66 @@
 
 @tailwind components;
 
+.about {
+  @apply text-gray-900 leading-relaxed;
+}
+
+.about p + p {
+  @apply mt-6;
+}
+
+.about * + * {
+  @apply mt-6;
+}
+
+.about li {
+  @apply mt-2;
+}
+
+.about li + li {
+  @apply mt-2;
+}
+
+.about strong {
+  @apply text-gray-900 font-bold;
+}
+
+.about a {
+  @apply text-blue-700 font-semibold;
+}
+
+.about strong a {
+  @apply font-bold;
+}
+
+.about h2 {
+  @apply leading-tight text-xl font-bold text-gray-900 mb-2 mt-10;
+}
+
+.about h3 {
+  @apply leading-tight text-lg font-bold text-black mt-8 -mb-2;
+}
+
+.about code {
+  @apply font-mono text-sm inline bg-gray-700 px-1;
+}
+
+.about pre code {
+  @apply block bg-black p-4 rounded;
+}
+
+.about blockquote {
+  @apply border-l-4 border-gray-700 pl-4 italic;
+}
+
+.about ul {
+  @apply pl-5 list-disc;
+}
+
+.about ol {
+  @apply pl-5 list-decimal;
+}
+
 .markdown {
   @apply text-gray-900 leading-relaxed;
 }
