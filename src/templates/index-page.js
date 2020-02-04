@@ -16,15 +16,12 @@ export const IndexPageTemplate = ({
   intro
 }) => (
   <div>
-    <div
-      // className="full-width-image margin-top-0"
-      className="w-full bg-cover bg-bottom mt-0"
+    <section
+      className="bg-center bg-cover"
       style={{
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
         height: `26rem`
       }}
     >
@@ -36,7 +33,7 @@ export const IndexPageTemplate = ({
           {subheading}
         </h3>
       </div>
-    </div>
+    </section>
     
     <section className="section section--gradient py-16">
       <div className="flex flex-col justify-center items-center">

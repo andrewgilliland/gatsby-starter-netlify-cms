@@ -81,19 +81,19 @@ const Navbar = () => {
           className={`px-5 pb-4 sm:flex ${isOpen ? "block" : "hidden"}`}
         >
           <Link
-            className="block px-5 mt-1 sm:mt-0 hover:bg-gray-300 rounded"
+            className="block px-5 mt-1 sm:mt-0 hover:bg-gray-300 focus:outline-none focus:bg-gray-300 rounded"
             to="/about"
           >
             About
           </Link>
           <Link
-            className="block px-5 mt-1 sm:mt-0 hover:bg-gray-300 rounded"
+            className="block px-5 mt-1 sm:mt-0 hover:bg-gray-300 focus:outline-none focus:bg-gray-300 rounded"
             to="/blog"
           >
             Blog
           </Link>
           <Link
-            className="block px-5 mt-1 sm:mt-0 hover:bg-gray-300 rounded"
+            className="block px-5 mt-1 sm:mt-0 hover:bg-gray-300 focus:outline-none focus:bg-gray-300 rounded"
             to="/contact"
           >
             Contact
