@@ -9,7 +9,7 @@ class TagRoute extends React.Component {
     const postLinks = posts.map(post => (
       <li key={post.node.fields.slug}>
         <Link to={post.node.fields.slug}>
-          <h2 className="inline-block font-semibold text-blue-600  hover:bg-blue-200 focus:outline-none focus:bg-blue-200 rounded mt-1 ">
+          <h2 className="inline-block font-semibold text-blue-600 hover:bg-blue-200 focus:outline-none focus:bg-blue-200 rounded px-5 mt-1 ">
             {post.node.frontmatter.title}
           </h2>
         </Link>
@@ -28,7 +28,7 @@ class TagRoute extends React.Component {
           <Helmet title={`${tag} | ${title}`} />
           <div className="max-w-xl px-4 py-16 mx-auto">
             <h3 className="text-lg sm:text-3xl font-semibold">{tagHeader}</h3>
-            <ul className="px-6 mt-10">{postLinks}</ul>
+            <ul className="mt-10">{postLinks}</ul>
             <p className="mt-10">
               <Link
                 className="font-semibold text-blue-700 px-4 py-2 rounded border-2 border-blue-500 hover:bg-blue-500 hover:text-gray-100"
