@@ -19,31 +19,35 @@ export const IndexPageTemplate = ({
     <section
       className="bg-center bg-cover"
       style={{
-        backgroundImage: `url(${
+        backgroundImage: `linear-gradient(to right bottom, rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)), url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
         height: `26rem`
       }}
     >
       <div className="h-full flex flex-col justify-center items-center">
-        <h1 className="text-3xl sm:text-5xl font-bold bg-gray-100 rounded shadow px-4 py-2">
+        <h1 className="text-blue-grey-050 text-3xl sm:text-5xl font-bold px-4 py-2">
           {title}
         </h1>
-        <h3 className="text-lg sm:text-xl font-semibold bg-gray-100 bg-gray-100 rounded shadow px-2 py-1 mt-5">
+        <h3 className="text-blue-grey-050 text-lg sm:text-xl font-semibold px-2 py-1 mt-5">
           {subheading}
         </h3>
       </div>
     </section>
-    
-    <section className="section section--gradient py-16">
-      <div className="flex flex-col justify-center items-center">
-        <h1 className="text-gray-900 text-2xl">{mainpitch.title}</h1>
-        <h3 className="text-gray-800 text-lg mt-2">{mainpitch.description}</h3>
+
+    <section className="bg-black py-16">
+      <div className="flex flex-col justify-center items-center px-4">
+        <h1 className="font-bold text-blue-grey-200 text-xl">
+          {mainpitch.title}
+        </h1>
+        <h3 className="text-blue-grey-200 text-lg mt-2">
+          {mainpitch.description}
+        </h3>
       </div>
 
-      <div className="flex flex-col items-center mt-10">
-        <h3 className="font-semibold text-gray-900 text-lg">{heading}</h3>
-        <p className="leading-relaxed text-gray-800 text-center max-w-lg mt-4">
+      <div className="flex flex-col items-center border-b border-blue-grey-900 px-4 pb-16 mt-10">
+        <h3 className="font-semibold text-blue-grey-200 text-lg">{heading}</h3>
+        <p className="leading-relaxed text-blue-grey-200 text-center max-w-lg mt-4">
           {description}
         </p>
       </div>
@@ -51,14 +55,14 @@ export const IndexPageTemplate = ({
       <Features gridItems={intro.blurbs} />
 
       <div className="flex flex-col items-center mt-20">
-        <h3 className="font-semibold text-gray-900 text-lg sm:text-xl tracking-wide uppercase">
+        <h3 className="font-bold text-blue-grey-200 text-lg sm:text-xl tracking-wide uppercase">
           Latest stories
         </h3>
 
         <BlogRoll />
 
         <Link
-          className="font-semibold text-gray-100 sm:text-lg bg-blue-700 px-4 py-2 sm:px-5 sm:py-3 rounded mt-10 hover:bg-blue-600 focus:bg-blue-600"
+          className="font-semibold text-gray-100 sm:text-lg bg-cyan-500 px-4 py-2 sm:px-5 sm:py-3 rounded mt-10 hover:bg-cyan-600 focus:bg-cyan-600"
           to="/blog"
         >
           Read More

@@ -10,16 +10,16 @@ export default class BlogIndexPage extends React.Component {
         <section
           className="w-full bg-cover bg-bottom flex justify-center items-center mt-0"
           style={{
-            backgroundImage: `url('/img/blog-index.jpg')`,
+            backgroundImage: `linear-gradient(to right bottom, rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)),url('/img/blog-index.jpg')`,
             height: `26rem`
           }}
         >
-          <h1 className="text-3xl sm:text-5xl font-bold bg-gray-100 rounded shadow px-6 py-4"
+          <h1 className="text-blue-grey-050 text-3xl sm:text-5xl font-bold px-6 py-4"
           >
             Blog
           </h1>
         </section>
-        <section className="flex justify-center items-center">
+        <section className="bg-black flex justify-center items-center">
               <BlogRoll />
         </section>
       </Layout>
