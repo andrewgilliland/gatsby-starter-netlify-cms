@@ -6,6 +6,7 @@ import Content, { HTMLContent } from "../components/Content";
 
 export const TestimonialsPageTemplate = ({
   title,
+  testimonial,
   content,
   contentComponent
 }) => {
@@ -15,6 +16,13 @@ export const TestimonialsPageTemplate = ({
     <section className="bg-black text-blue-grey-200">
       <div className="max-w-xl px-4 mx-auto py-16">
         <h2 className="font-bold text-2xl sm:text-4xl">{title}</h2>
+
+        <div>
+          {testimonial.map(testimonial => (
+            <div key={testimonial.client}>{testimonial.client}</div>
+          ))}
+        </div>
+        
         <PageContent
           className="about content text-blue-grey-200"
           content={content}
@@ -27,6 +35,7 @@ export const TestimonialsPageTemplate = ({
 TestimonialsPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
+  testimonial: PropTypes.array,
   contentComponent: PropTypes.func
 };
 
@@ -39,13 +48,18 @@ const TestimonialsPage = ({ data }) => {
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
+        testimonial={post.frontmatter.testimonial}
       />
     </Layout>
   );
 };
 
 TestimonialsPage.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object
+    })
+  })
 };
 
 export default TestimonialsPage;
@@ -56,6 +70,9 @@ export const TestimonialsPageQuery = graphql`
       html
       frontmatter {
         title
+        testimonial {
+          client
+        }
       }
     }
   }

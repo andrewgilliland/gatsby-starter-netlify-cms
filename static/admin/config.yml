@@ -144,6 +144,12 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
+          - {
+              label: testimonial,
+              name: testimonial,
+              widget: list,
+              fields: [{ label: Client, name: client, widget: text }],
+            }
       # - file: "src/pages/products/index.md"
       #   label: "Products Page"
       #   name: "products"
