@@ -143,12 +143,15 @@ collections:
               default: "testimonials-page",
             }
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
           - {
-              label: testimonial,
-              name: testimonial,
+              label: Testimonials,
+              name: testimonials,
               widget: list,
-              fields: [{ label: Client, name: client, widget: text }],
+              fields:
+                [
+                  { label: Client, name: client, widget: text },
+                  { label: Quote, name: quote, widget: text },
+                ],
             }
       # - file: "src/pages/products/index.md"
       #   label: "Products Page"
