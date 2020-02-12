@@ -149,7 +149,7 @@ collections:
               widget: list,
               fields:
                 [
-                  { label: Client, name: client, widget: text },
+                  { label: Client, name: client, widget: string },
                   { label: Quote, name: quote, widget: text },
                 ],
             }

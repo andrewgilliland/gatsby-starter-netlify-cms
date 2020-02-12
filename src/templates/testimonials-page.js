@@ -8,7 +8,6 @@ export const TestimonialsPageTemplate = ({ title, testimonials }) => {
     <section className="text-gray-800">
       <div className="max-w-xl px-4 mx-auto py-16">
         <h2 className="font-bold text-2xl sm:text-4xl">{title}</h2>
-
         <div>
           {testimonials.map(testimonial => (
             <div key={testimonial.client}>
